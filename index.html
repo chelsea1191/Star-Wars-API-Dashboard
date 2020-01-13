@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Star Wars API</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' />
+    <link href="styles.css" rel="stylesheet">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js'></script>
+        <script src='script.js' defer></script>
+</head>
+<body>
+  <div>
+    <h1 class="mainTitle">The Starwars Dashboard</h1>
+  </div>
+
+  <div id="flexContainer">
+
+    <div class="overallCards">
+      <div>
+        <h4 class="title">PEOPLE</h4>
+        <form>
+          <div class="form-group" style="margin: 5px;" onkeyup="search('peopleCards', 'peopleSearch')">
+            <input class="form-control" id="peopleSearch">
+          </div>
+        </form>
+      </div>
+      <div class="viewing"></div>
+      <div class="btnHolder">
+        <button class="btn btn-primary" type="submit" onclick="loadMore('people')">Load More</button>
+      </div>
+      <div>
+        <ul id="peopleCards" class="cards">
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="overallCards">
+      <div>
+        <h4 class="title">FILMS</h4>
+        <form>
+          <div class="form-group" style="margin: 5px;" onkeyup="search('filmsCards', 'filmSearch')">
+            <input class="form-control" id="filmSearch">
+          </div>
+        </form>
+      </div>
+      <div class="viewing"></div>
+      <div>
+        <ul id="filmsCards" class="cards">
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="overallCards">
+      <div>
+        <h4 class="title">STARSHIPS</h4>
+        <form>
+          <div class="form-group" style="margin: 5px;" onkeyup="search('starshipsCards', 'starshipSearch')">
+            <input class="form-control" id="starshipSearch">
+          </div>
+        </form>
+      </div>
+      <div class="btnHolder">
+        <button class="btn btn-primary" type="submit" onclick="loadMore('starships')">Load More</button>
+      </div>
+      <div class="viewing"></div>
+      <div>
+        <ul id="starshipsCards" class="cards">
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="overallCards">
+      <div>
+        <h4 class="title">VEHICLES</h4>
+        <form>
+          <div class="form-group" style="margin: 5px;"  onkeyup="search('vehiclesCards', 'vehicleSearch')">
+            <input class="form-control" id="vehicleSearch">
+          </div>
+        </form>
+      </div>
+      <div class="btnHolder">
+        <button class="btn btn-primary" type="submit" onclick="loadMore('vehicles')">Load More</button>
+      </div>
+      <div class="viewing"></div>
+      <div>
+        <ul id="vehiclesCards" class="cards">
+        </ul>
+      </div>
+    </div>
+</body>
+</html>

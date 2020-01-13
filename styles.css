@@ -1,0 +1,25 @@
+.overallCards {
+  display: flex;
+  flex-direction: column;
+}
+
+#flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.items {
+  border: 1px solid black;
+  border-radius: 10px;
+  list-style: none;
+  margin: 10px;
+  padding: 5px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+.btnHolder {
+  display: flex;
+  justify-content: space-around;
+}
