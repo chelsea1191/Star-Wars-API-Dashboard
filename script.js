@@ -95,7 +95,7 @@ async function loadMore (type) {
       })
     }
     ).catch(error => {
-      alert("austin has big weiner")
+      alert("no more data!")
     })
   }
   if (type === "vehicles") {
