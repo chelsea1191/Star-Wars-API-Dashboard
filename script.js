@@ -3,19 +3,12 @@ let peopleAPI = "http://star-cors.herokuapp.com/people"
 let starshipsAPI = "http://star-cors.herokuapp.com/starships"
 let vehiclesAPI = "http://star-cors.herokuapp.com/vehicles"
 let allUls = document.querySelectorAll("ul"); //people is 0, films is 1, starships is 2, vehicles is 3
-let countsArray = [];
 
 Promise.all([filmsAPI, peopleAPI, starshipsAPI, vehiclesAPI].map(eachUrl => fetch(eachUrl).then(result => result.json()))).then(data => {
   let films = data[0].results
   let people = data[1].results
   let starships =  data[2].results
   let vehicles = data[3].results
-  // data.forEach((count) => {
-  //   let displayCount = document.createElement("p");
-  //   displayCount.innerHTML = `Viewing ${count.results.length} of ${count.count} results`
-  //   allUls[data.indexOf(count)].appendChild(displayCount)
-  //   countsArray.push(count.count);
-  //    });
  films.forEach((film) => {
    let title = film.title
    let date = film.release_date
